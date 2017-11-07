@@ -10,5 +10,7 @@ RUN sed -e s/Docker/"$AUTHOR"/ Hello_docker.html > index.html && \
 	chmod g=u /var/cache/nginx && \
 	chmod g=u /var/run
 
+EXPOSE 8080
+
 #CMD cd /usr/share/nginx/html && sed -e s/Docker/"$AUTHOR"/ Hello_docker.html > index.html ; nginx -g 'daemon off;'
 CMD nginx -g 'daemon off;'
